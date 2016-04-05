@@ -16,6 +16,6 @@ if (argv._[0] === 'build') {
 }
 
 if (argv._[0] === 'start') {
-    var port = argv.p ? argv.p : process.env.PORT;
+    var port = argv.p ? argv.p : (process.env.PORT || 8080);
     dashboard.serve(port);
 }
