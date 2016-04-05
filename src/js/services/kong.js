@@ -74,8 +74,9 @@ angular.module('app')
             checkConfig: function (config) {
                 var url = config.url;
                 if (config.auth.type === 'basic_auth') {
-                    var auth_string = btoa(config.auth.username + ':' + config.auth.password);
-                    $http.defaults.headers.common['Authorization'] = 'Basic ' + auth_string;
+                    // var auth_string = btoa(config.auth.username + ':' + config.auth.password);
+                    // $http.defaults.headers.common['Authorization'] = 'Basic ' + auth_string;
+                    $http.defaults.headers.common[config.auth.username] = config.auth.password;
                 } else {
                     delete $http.defaults.headers.common['Authorization'];
                 }

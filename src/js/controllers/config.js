@@ -12,13 +12,13 @@ angular.module('app').controller("ConfigController", ["$scope", "Kong", "Alert",
         if ($scope.config.auth.type === 'basic_auth') {
             var parser = document.createElement('a');
             parser.href = $scope.config.url;
-            if (parser.protocol === 'http:') {
-                var message = "WARNING - You are about to use basic auth over http requests, which is not recommended: " +
-                    "password will be sent over the network in plaintext.\n\nAre you sure you want to proceed?";
-                if (!confirm(message)) {
-                    return;
-                }
-            }
+            // if (parser.protocol === 'http:') {
+            //     var message = "WARNING - You are about to use basic auth over http requests, which is not recommended: " +
+            //         "password will be sent over the network in plaintext.\n\nAre you sure you want to proceed?";
+            //     if (!confirm(message)) {
+            //         return;
+            //     }
+            // }
         }
 
         Kong.setConfig($scope.config).then(function() {
