@@ -18,11 +18,8 @@
     "serve": "^1.4.0",
     "uglify-js": "^2.6.1"
   },
-  "bin": {
-    "kong-dashboard": "./bin/kong-dashboard.js"
-  },
   "scripts": {
-    "install": "node ./bin/kong-dashboard build",
-    "start": "node ./bin/kong-dashboard start"
+    "install": "node kong-dashboard.js build",
+    "start": "node kong-dashboard.js start"
   }
 }

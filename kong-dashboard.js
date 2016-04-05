@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var dashboard = require('../lib/kong-dashboard');
+var dashboard = require('./lib/kong-dashboard');
 var parseArgs = require('minimist');
 var argv = parseArgs(process.argv.slice(2));
 
